@@ -8,7 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Instala las dependencias
-RUN pip install --no-cache-dir spyne requests
+
+RUN pip install --no-cache-dir spyne requests lxml
 
 # Expone el puerto 8100
 EXPOSE 8100
