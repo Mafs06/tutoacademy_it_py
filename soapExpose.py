@@ -67,7 +67,6 @@ class Service(ServiceBase):
                     profilestatus = profile_data['profilestatus'],
                     )                    
                 )                
-
             return profiles     
                
         except:
@@ -87,6 +86,6 @@ if __name__ == '__main__':
 
     #Se expone en el puerto 8000
     #Se puede ver el archivo wsdl en localhost:8000/?wsdl
-    server = make_server('host.docker.internal', 8100, wsgi_app)
+    server = make_server('0.0.0.0', 8100, wsgi_app)
     print("Server port 8100")
     server.serve_forever()
